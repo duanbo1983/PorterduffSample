@@ -49,17 +49,17 @@ public class RoundImageView extends View{
 
     public RoundImageView(Context context) {
         super(context);
-        init(context);
+        init();
     }
 
     public RoundImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init();
     }
 
     public RoundImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init(context);
+        init();
     }
 
     // create a bitmap with a circle, used for the "dst" image
@@ -91,9 +91,9 @@ public class RoundImageView extends View{
             "Darken", "Lighten", "Multiply", "Screen"
     };
 
-    private void init(Context context) {
+    private void init() {
         mSrcB = makeDst(W, H);
-        mDstB = BitmapFactory.decodeResource(context.getResources(), R.drawable.cc);
+        mDstB = makeSrc(W, H);
 
         // make a ckeckerboard pattern
         Bitmap bm = Bitmap.createBitmap(new int[] { 0xFFFFFFFF, 0xFFCCCCCC,
