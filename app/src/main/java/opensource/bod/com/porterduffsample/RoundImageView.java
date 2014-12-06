@@ -140,9 +140,9 @@ public class RoundImageView extends View{
                             Canvas.FULL_COLOR_LAYER_SAVE_FLAG |
                             Canvas.CLIP_TO_LAYER_SAVE_FLAG);
             canvas.translate(x, y);
-            canvas.drawBitmap(mDstB, 0, 0, paint);
-            paint.setXfermode(sModes[i]);
             canvas.drawBitmap(mSrcB, 0, 0, paint);
+            paint.setXfermode(sModes[i]);
+            canvas.drawBitmap(mDstB, 0, 0, paint);
             paint.setXfermode(null);
             canvas.restoreToCount(sc);
 
