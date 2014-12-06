@@ -20,8 +20,8 @@ import android.view.View;
  * Created by bod on 12/3/2014.
  */
 public class RoundImageView extends View{
-    private static final int W = 256;
-    private static final int H = 256;
+    private static final int W = 200;
+    private static final int H = 200;
     private static final int ROW_MAX = 4;   // number of samples per row
 
     private Bitmap mSrcB;
